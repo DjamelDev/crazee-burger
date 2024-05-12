@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 const LoginForm = () => {
   const [prenom, setPrenom] = useState("");
@@ -21,7 +22,9 @@ const LoginForm = () => {
         value={prenom}
         onChange={(e) => setPrenom(e.target.value)}
       />
-      <button>Accédez à votre espace</button>
+      <Link to={`/order/${prenom}`}>
+        <button>Accédez à votre espace</button>
+      </Link>
     </form>
   );
 };
