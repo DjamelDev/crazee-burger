@@ -5,7 +5,9 @@ const Error = () => {
   return (
     <div>
       <h1>ErrorPage</h1>
-      <NavLink to="/"><button>Retourner à la page d'accueil</button></NavLink>
+      <NavLink to="/">
+        <button>Retourner à la page d'accueil</button>
+      </NavLink>
     </div>
   );
 };
