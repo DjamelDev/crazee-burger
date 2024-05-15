@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import styled from "styled-components";
-import Chevron from "../../../../public/images/chevron.png";
 import { BsPersonCircle } from "react-icons/bs";
+import { IoChevronForward } from "react-icons/io5";
 
 
 const LoginForm = () => {
@@ -30,7 +30,7 @@ const LoginForm = () => {
             onChange={(e) => setPrenom(e.target.value)}
           />
         </div>
-      <button>Accédez à mon espace<img src={Chevron} alt="" /></button>
+      <div className="button-with-icon"><button>Accédez à mon espace <IoChevronForward className="icon-chevron"/></button></div>
       
     </LoginFormStyled>
   );
@@ -79,13 +79,17 @@ const LoginFormStyled = styled.form`
 
     input {
       border: none;
-      color: rgba(211, 211, 211, 1);
+      color: black;
       font-size: 15px;
       font-family: "Arial", sans-serif;
+      width: 100%;
+    }
+
+    input::placeholder {
+      color: rgba(211, 211, 211, 1);
     }
  
   }
-
 
   button {
     background-color: rgba(255, 159, 27, 1);
@@ -107,12 +111,12 @@ const LoginFormStyled = styled.form`
       background-color: rgba(255, 255, 255, 1);
       color: rgba(255, 159, 27, 1);
 
-      img {
-        background-color: rgba(255, 159, 27, 1);
+      .icon-chevron {
+        color: rgba(255, 159, 27, 1);
       }
     }
     
-    img {
+    .icon-chevron {
       margin-left: 5px;
     }
   }
