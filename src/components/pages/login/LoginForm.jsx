@@ -1,12 +1,13 @@
 import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
-import { BsPersonCircle } from "react-icons/bs";
 import { IoChevronForward } from "react-icons/io5";
-
+import Input from "./Input";
+import { BsPersonCircle } from "react-icons/bs";
 
 const LoginForm = () => {
   const [prenom, setPrenom] = useState("");
+
   const navigate = useNavigate();
 
   const handleSubmit = (e) => {
@@ -14,37 +15,39 @@ const LoginForm = () => {
     setPrenom("");
     navigate(`order/${prenom}`);
   };
-  
+
+  const handleInputChange = (e) => {
+    setPrenom(e.target.value);
+  };
+
   return (
     <LoginFormStyled onSubmit={handleSubmit}>
       <h1>Bienvenue chez nous !</h1>
       <hr />
       <h2>Connectez-vous</h2>
-        <div className="input-container">
-        <BsPersonCircle className="icon"/>
-          <input
-            type="text"
-            placeholder="Entrez votre prénom"
-            required
-            value={prenom}
-            onChange={(e) => setPrenom(e.target.value)}
-          />
-        </div>
-      <div className="button-with-icon"><button>Accédez à mon espace <IoChevronForward className="icon-chevron"/></button></div>
-      
+      <Input
+        value={prenom}
+        onChange={handleInputChange}
+        placeholder={"Entrez votre prénom"}
+        required
+        Icon={<BsPersonCircle className="icon" />}
+      />
+      <div className="button-with-icon">
+        <button>
+          Accédez à mon espace <IoChevronForward className="icon-chevron" />
+        </button>
+      </div>
     </LoginFormStyled>
   );
 };
 
 const LoginFormStyled = styled.form`
- 
- text-align: center;
+  text-align: center;
   font-family: "Amatic SC", sans-serif;
   max-width: 500px;
   min-width: 400px;
   margin: 0 auto;
   padding: 2.5rem 2rem;
-
 
   h1 {
     color: rgba(255, 255, 255, 1);
@@ -59,36 +62,6 @@ const LoginFormStyled = styled.form`
     font-size: 36px;
     color: rgba(255, 255, 255, 1);
     margin: 20px 10px 18px;
-  }
-
-  .input-container {
-
-    border-radius: 5px;
-    background: rgba(255, 255, 255, 1);
-    padding: 18px 24px;
-    margin-bottom: 18px;
-    display: flex;
-    align-items: center;
-
-    .icon {
-      margin-right: 10px;
-      width: 20px;
-      height: 20px;
-      color: grey;
-    }
-
-    input {
-      border: none;
-      color: black;
-      font-size: 15px;
-      font-family: "Arial", sans-serif;
-      width: 100%;
-    }
-
-    input::placeholder {
-      color: rgba(211, 211, 211, 1);
-    }
- 
   }
 
   button {
@@ -115,7 +88,7 @@ const LoginFormStyled = styled.form`
         color: rgba(255, 159, 27, 1);
       }
     }
-    
+
     .icon-chevron {
       margin-left: 5px;
     }
