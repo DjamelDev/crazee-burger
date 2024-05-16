@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { theme } from "../../theme";
 
 const Input = ({ value, onChange, Icon, ...extraProps }) => {
   return (
@@ -11,30 +12,31 @@ const Input = ({ value, onChange, Icon, ...extraProps }) => {
 };
 
 const InputStyled = styled.div`
-  border-radius: 5px;
-  background: rgba(255, 255, 255, 1);
+  border-radius: ${theme.borderRadius.round};
+  background: ${theme.colors.white};
   padding: 18px 24px;
   margin-bottom: 18px;
   display: flex;
   align-items: center;
 
   .icon {
-    margin-right: 10px;
+    margin-right: ${theme.spacing.sm};
     width: 20px;
     height: 20px;
-    color: grey;
+    color: ${theme.colors.greySemiDarkf};
   }
 
   input {
     border: none;
-    color: black;
-    font-size: 15px;
+    color: ${theme.colors.dark};
+    font-size: ${theme.fonts.size.P0};
     font-family: "Arial", sans-serif;
     width: 100%;
   }
 
   input::placeholder {
-    color: rgba(211, 211, 211, 1);
+    color: ${theme.colors.greyMedium};
+    background-color: ${theme.colors.white};
   }
 `;
 

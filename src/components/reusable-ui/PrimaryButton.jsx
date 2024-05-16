@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { theme } from "../../theme";
 
 const PrimaryButton = ({ Icon, label, onClick }) => {
   return (
@@ -11,8 +12,8 @@ const PrimaryButton = ({ Icon, label, onClick }) => {
 };
 
 const PrimaryButtonStyled = styled.button`
-  background-color: rgba(255, 159, 27, 1);
-  border: 1px solid rgba(255, 159, 27, 1);
+  background-color: ${theme.colors.primary_burger};
+  border: 1px solid ${theme.colors.primary_burger};
   border-radius: 5px;
   color: rgba(255, 255, 255, 1);
   font-size: 15px;
@@ -27,8 +28,8 @@ const PrimaryButtonStyled = styled.button`
   transition: all 0.3s ease-in-out;
 
   &:hover {
-    background-color: rgba(255, 255, 255, 1);
-    color: rgba(255, 159, 27, 1);
+    background-color: ${theme.colors.background_white};
+    color: ${theme.colors.primary_burger};
   }
 `;
 

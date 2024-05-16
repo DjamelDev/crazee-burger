@@ -5,6 +5,7 @@ import { IoChevronForward } from "react-icons/io5";
 import TextInput from "../../reusable-ui/TextInput";
 import { BsPersonCircle } from "react-icons/bs";
 import PrimaryButton from "../../reusable-ui/PrimaryButton";
+import { theme } from "../../../theme";
 
 const LoginForm = () => {
   const [prenom, setPrenom] = useState("");
@@ -49,25 +50,25 @@ const LoginFormStyled = styled.form`
   max-width: 500px;
   min-width: 400px;
   margin: 0 auto;
-  padding: 2.5rem 2rem;
+  padding: 2.5rem ${theme.spacing.lg};
 
   h1 {
-    color: rgba(255, 255, 255, 1);
-    font-size: 48px;
+    color: ${theme.colors.white};
+    font-size: ${theme.fonts.size.P5};
   }
 
   hr {
-    border: 1.5px solid rgba(245, 106, 44, 1);
+    border: 1.5px solid ${theme.colors.loginLine};
   }
 
   h2 {
-    font-size: 36px;
-    color: rgba(255, 255, 255, 1);
+    font-size: ${theme.fonts.size.P4};
+    color: ${theme.colors.white};
     margin: 20px 10px 18px;
   }
 
   .icon-chevron {
-    margin-left: 5px;
+    margin-left: ${theme.spacing.xs};
     display: flex;
     align-items: center;
     justify-content: center;
