@@ -2,8 +2,9 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import { IoChevronForward } from "react-icons/io5";
-import TextInput from "./TextInput";
+import TextInput from "../../reusable-ui/TextInput";
 import { BsPersonCircle } from "react-icons/bs";
+import PrimaryButton from "../../reusable-ui/PrimaryButton";
 
 const LoginForm = () => {
   const [prenom, setPrenom] = useState("");
@@ -32,11 +33,12 @@ const LoginForm = () => {
         required
         Icon={<BsPersonCircle className="icon" />}
       />
-      <div className="button-with-icon">
-        <button>
-          Accédez à mon espace <IoChevronForward className="icon-chevron" />
-        </button>
-      </div>
+      <PrimaryButton
+        label={"Accéder à mon espace"}
+        Icon={
+          <IoChevronForward className="icon-chevron" onClick={handleSubmit} />
+        }
+      />
     </LoginFormStyled>
   );
 };
@@ -64,34 +66,11 @@ const LoginFormStyled = styled.form`
     margin: 20px 10px 18px;
   }
 
-  button {
-    background-color: rgba(255, 159, 27, 1);
-    border: 1px solid rgba(255, 159, 27, 1);
-    border-radius: 5px;
-    color: rgba(255, 255, 255, 1);
-    font-size: 15px;
-    font-family: "Arial", sans-serif;
-    font-weight: 700;
-    width: 400px;
-    height: 53px;
+  .icon-chevron {
+    margin-left: 5px;
     display: flex;
     align-items: center;
     justify-content: center;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
-
-    &:hover {
-      background-color: rgba(255, 255, 255, 1);
-      color: rgba(255, 159, 27, 1);
-
-      .icon-chevron {
-        color: rgba(255, 159, 27, 1);
-      }
-    }
-
-    .icon-chevron {
-      margin-left: 5px;
-    }
   }
 `;
 
