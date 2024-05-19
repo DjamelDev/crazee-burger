@@ -1,13 +1,12 @@
 import React from "react";
-import LogoBurger from "../../../public/images/logo.png";
 import styled from "styled-components";
 import { theme } from "../../theme";
 
-const Logo = () => {
+const Logo = ({ className }) => {
   return (
-    <LogoStyled>
+    <LogoStyled className={className}>
       <h1>Crazee</h1>
-      <img src={LogoBurger} alt="logo crazee-burger" />
+      <img src="/images/logo.png" alt="logo crazee-burger" />
       <h1>Burger</h1>
     </LogoStyled>
   );
@@ -21,18 +20,19 @@ const LogoStyled = styled.div`
     display: inline;
     text-align: center;
     font-family: "Amatic SC", cursive;
-    font-size: ${theme.fonts.size.P7};
+    font-size: ${theme.fonts.size.P4};
     color: ${theme.colors.primary};
     line-height: 1em;
     letter-spacing: 1.5px;
     font-weight: ${theme.fonts.size.weights.bold};
+    text-transform: uppercase;
   }
 
   img {
-    object-fit: cover;
+    object-fit: contain;
     object-position: center;
-    height: 150px;
-    width: 200px;
+    height: 60px;
+    width: 80px;
     margin: 0 ${theme.gridUnit / 2}px;
   }
 `;
