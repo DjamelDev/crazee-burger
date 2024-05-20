@@ -4,11 +4,10 @@ import { theme } from "../../../theme";
 import Profile from "./Profile";
 
 const NavbarRightSide = ({ username }) => {
-  console.log("USERNAME", username);
   return (
     <NavbarRightSideStyled>
       {/* <div className="admin-button">Button admin</div> */}
-      <Profile username={username}/>
+      <Profile username={username} />
     </NavbarRightSideStyled>
   );
 };
