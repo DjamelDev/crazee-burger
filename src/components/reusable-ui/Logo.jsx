@@ -2,9 +2,9 @@ import React from "react";
 import styled from "styled-components";
 import { theme } from "../../theme";
 
-const Logo = ({ className }) => {
+const Logo = ({ className, onClick }) => {
   return (
-    <LogoStyled className={className}>
+    <LogoStyled className={className} onClick={onClick}>
       <h1>Crazee</h1>
       <img src="/images/logo.png" alt="logo crazee-burger" />
       <h1>Burger</h1>
