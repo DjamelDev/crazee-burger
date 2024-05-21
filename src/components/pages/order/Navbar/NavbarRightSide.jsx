@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import { theme } from "../../../theme";
 import Profile from "./Profile";
+import { theme } from "../../../../theme";
 
 const NavbarRightSide = ({ username }) => {
   return (
