@@ -5,7 +5,6 @@ const colors = {
   background_white: "#f5f5f7",
   background_dark: "#292729",
   primary: "#ffa01b",
-  primary_burger: "#ff9f1b",
   green: "green",
   success: "#60bd4f",
   red: "#e25549",
@@ -16,7 +15,7 @@ const colors = {
   greySemiDark: "#93a2b1",
   greyDark: "#6f737e",
   greyBlue: "#747b91",
-  loginLine: "#f56a2cloginLine",
+  loginLine: "#f56a2c",
 };
 
 const spacing = {
@@ -41,15 +40,14 @@ const fonts = {
     P4: "36px",
     P5: "48px",
     P6: "60px",
-    P7: "100px",
-    weights: {
-      light: 300,
-      regular: 400,
-      medium: 500,
-      semiBold: 600,
-      bold: 700,
-      heavy: 800,
-    },
+  },
+  weights: {
+    light: 300,
+    regular: 400,
+    medium: 500,
+    semiBold: 600,
+    bold: 700,
+    heavy: 800,
   },
 };
 const gridUnit = 8;
@@ -59,6 +57,7 @@ const borderRadius = {
   extraRound: "15px",
   circle: "50%",
 };
+
 const shadows = {};
 
 export const theme = {

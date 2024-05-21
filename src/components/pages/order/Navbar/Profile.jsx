@@ -52,7 +52,7 @@ const ProfileStyled = styled.div`
         small {
           font-size: ${theme.fonts.size.XXS};
           color: ${theme.colors.greyBlue};
-          font-weight: ${theme.fonts.size.weights.medium};
+          font-weight: ${theme.fonts.weights.medium};
           text-decoration: none;
           position: relative;
           bottom: 2px;

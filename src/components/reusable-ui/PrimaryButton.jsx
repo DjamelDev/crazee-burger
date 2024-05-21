@@ -12,8 +12,8 @@ const PrimaryButton = ({ Icon, label, onClick }) => {
 };
 
 const PrimaryButtonStyled = styled.button`
-  background-color: ${theme.colors.primary_burger};
-  border: 1px solid ${theme.colors.primary_burger};
+  background-color: ${theme.colors.primary};
+  border: 1px solid ${theme.colors.primary};
   border-radius: 5px;
   color: rgba(255, 255, 255, 1);
   font-size: 15px;
@@ -29,7 +29,8 @@ const PrimaryButtonStyled = styled.button`
 
   &:hover {
     background-color: ${theme.colors.background_white};
-    color: ${theme.colors.primary_burger};
+    color: ${theme.colors.primary};
+    border: none;
   }
 `;
 
