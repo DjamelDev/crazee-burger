@@ -5,15 +5,13 @@ import { theme } from "../../../../theme";
 
 const ToastAdmin = () => {
   return (
-    <div>
-      <ToastContainer className={"toaster"} bodyClassName="body-toast" />
-    </div>
+    <ToastContainerStyled className={"toaster"} bodyClassName="body-toast" />
   );
 };
 
 export default ToastAdmin;
 
-const ToastAdminStyled = styled.form`
+const ToastContainerStyled = styled(ToastContainer)`
   .toaster {
     max-width: 300px;
   }
