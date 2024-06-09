@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { theme } from "../../../../theme";
 import Menu from "./Menu";
+import Admin from "../Admin/Admin";
 
 const Main = () => {
   return (
@@ -9,7 +10,7 @@ const Main = () => {
       {/* <div className="basket">Basket</div> */}
       <div className="menu-and-admin">
         <Menu />
-        <div className="admin">Admin</div>
+        <Admin />
       </div>
     </MainStyled>
   );
@@ -39,14 +40,5 @@ const MainStyled = styled.div`
     display: grid;
     border-bottom-left-radius: ${theme.borderRadius.extraRound};
     border-bottom-right-radius: ${theme.borderRadius.extraRound};
-
-    .admin {
-      background: red;
-      height: 250px;
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-    }
   }
 `;
