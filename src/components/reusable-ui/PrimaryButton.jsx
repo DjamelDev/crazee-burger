@@ -15,7 +15,8 @@ export default PrimaryButton;
 
 const PrimaryButtonStyled = styled.button`
   width: 100%;
-  border: 1px solid red;
+  border: none;
+  cursor: pointer;
   display: inline-flex;
   justify-content: center;
   align-items: center;
