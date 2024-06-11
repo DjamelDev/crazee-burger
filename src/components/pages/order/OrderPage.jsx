@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { useParams } from "react-router-dom";
 import styled from "styled-components";
 import { theme } from "../../../theme";
 import Navbar from "./Navbar/Navbar";
@@ -7,8 +6,7 @@ import Main from "./Main/Main";
 import OrderContext from "../../../context/OrderContext";
 
 const OrderPage = () => {
-  const [isModeAdmin, setIsModeAdmin] = useState(true);
-  // const { username } = useParams();
+  const [isModeAdmin, setIsModeAdmin] = useState(false);
 
   const orderContextValue = {
     isModeAdmin,
