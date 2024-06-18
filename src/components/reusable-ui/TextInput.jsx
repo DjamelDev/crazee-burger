@@ -29,7 +29,7 @@ const InputStyled = styled.div`
   input {
     border: none;
     color: ${theme.colors.dark};
-    font-size: ${theme.fonts.size.P0};
+    font-size: ${theme.fonts.size.SM};
     font-family: "Arial", sans-serif;
     width: 100%;
   }
