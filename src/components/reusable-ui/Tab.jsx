@@ -45,7 +45,7 @@ const TabStyled = styled.button`
   border-bottom-right-radius: 0;
 
   &:hover {
-    border-bottom: 2px solid ${theme.colors.white}; // Change color for testing
+    border-bottom: 2px solid ${theme.colors.white};
   }
 
   .icon {

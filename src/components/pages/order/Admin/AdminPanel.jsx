@@ -3,14 +3,18 @@ import styled from "styled-components";
 import { theme } from "../../../../theme";
 import { useContext } from "react";
 import OrderContext from "../../../../context/OrderContext";
+import { getTabsConfig } from "./getTabsConfig.jsx";
 
 const AdminPanel = () => {
-  const { isAddSelected, isEditSelected } = useContext(OrderContext);
+  const { isAddSelected, isEditSelected, currentTabSelected } =
+    useContext(OrderContext);
+
+  const tabs = getTabsConfig(currentTabSelected);
 
   return (
     <AdminPanelStyled>
-      {isAddSelected && "Ajouter un produit"}
-      {isEditSelected && "Modifier un produit"}
+      {currentTabSelected === "add" && "Ajouter un produit"}
+      {currentTabSelected === "edit" && "Modifier un produit"}
     </AdminPanelStyled>
   );
 };
