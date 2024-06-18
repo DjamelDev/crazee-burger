@@ -26,7 +26,7 @@ const CardStyled = styled.div`
   background: ${theme.colors.white};
   width: 240px;
   height: 330px;
-  box-shadow: -8px 8px 20px 0px rgb(0 0 0 / 20%);
+  box-shadow: ${theme.shadows.medium};
   border-radius: ${theme.borderRadius.extraRound};
 
   img {
